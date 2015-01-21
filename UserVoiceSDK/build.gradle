@@ -4,7 +4,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.14.+'
+        classpath 'com.android.tools.build:gradle:1.0.0'
     }
 }
 
@@ -46,6 +46,13 @@ android {
             resources.srcDirs = ['src']
             res.srcDirs = ['res']
         }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    compileOptions{
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
     }
 }
 
