@@ -56,6 +56,11 @@ android {
     }
 }
 
+task copydeps(type: Copy) {
+  from configurations.compile
+  into 'build/outputs/aar'
+}
+
 dependencies {
     compile 'com.android.support:support-v4:21.'
     compile 'com.android.support:appcompat-v7:21.+'
